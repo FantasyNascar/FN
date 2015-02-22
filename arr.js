@@ -7,7 +7,7 @@ function getLastWeeksPlace(){
 //"Dave Feher","Charles","Diane C","Matt Wilt","B.Wilt","P.North","E Feher","N Feher","Mary","DC #2"
 
 function getPlayersName(){
-	return["Smurf","Dt Champ","Rocketman","K.Crush","Ted C","Dianne C","Debbie G","Killer Bees","Sleeman","DC","Bill Cosbey"];
+	return["Smurf","Dt Champ","Rocketman","K.Crush","Ted C","Dianne C","Debbie G","Killer Bees","Sleeman","DC","Bill Cosbey","B Wilt","M Wilt"];
 }
 function getPlaces(){
 	return["1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th","11th","12th","13th","14th","15th","16th","17th","18th","19th","20th","21st","22nd","23rd","24th","25th","26th","27th","28th","29th","30th","31st","32nd","33rd","34th","35th","36th","37th","38th","39th","40th","41st","42nd","43rd"];
@@ -16,7 +16,7 @@ function getRaceLocations(){
 		return["Daytona","Atlanta","Las Vegas","Phoenix","Fontana","Martinsville","Texas","Bristol","Richmond","Talladega","Kansas","Charlotte","Dover","Poconos","Michigan","Sonoma","Daytona","Kentucky","New Hampshire","Indianapolis","Poconos","Watkins Glen","Michigan","Bristol","Darlington","Richmond","Chicagoland","New Hampshire","Dover","Charlotte","Kansas","Talladega","Martinsville","Texas","Phoenix","Homestead-Miami"];
 }
 function getDriverName(){
-		return ["0"," ","1","M. McMurray","2","B. Keselowski","3","A. Dillon","4","K. Harvick","5","K. Kahne","6","T. Bayne","7","A. Bowman","9","S. Hornish",
+		return ["0"," ","1","J. McMurray","2","B. Keselowski","3","A. Dillon","4","K. Harvick","5","K. Kahne","6","T. Bayne","7","A. Bowman","9","S. Hornish",
 				"10","D. Patrick","11","D. Hamlin","13","C. Mears","14","T. Stewart","15","C. Bowyer","16","G. Biffle","17","Stenhouse Jr.","18","Ky. Busch","19","C. Edwards",
 				"20","M. Kenseth","21","R. Blaney","22","J. Logano","23","J.J. Yeley","24","J. Gordon","26","J. Burton","27","P. Menard","29","J. Marks",
 				"30","Hornaday Jr.","31","R. Newman","32","B. Labonte","33","Ty Dillion","34","D. Ragan","35","C. Whitt","38","D. Gilliland",
@@ -28,11 +28,11 @@ function getDriverName(){
 				"95","M. McDowell","98","J. Wise"];
 }
 function allStarRace(){
-		return["4","2","48","4","24","4","24","48","4","48","48"];
+		return["4","2","48","4","24","4","24","48","4","48","48","4","88"];
 }
 //Montoya is number 79
 function getAltDriver(){
-	return["2","5","410","79","78","47","55","22","10","10","43"];
+	return["2","5","410","79","78","47","55","22","10","10","43","5","16"];
 }
 function getPlayersPicks(){
 			//person a pick 1, person a pick 2
@@ -47,7 +47,9 @@ function getPlayersPicks(){
 			["88","31","19","48","18","15","16","20","4","34","5","11","2","14","78","48"],
 			["88","31","2","5","18","24","20","22","15","11","42","5","48","14","16","19"],
 			["27","22","18","4","31","24","16","14","15","88","20","5","48","11","19","1"],
-			["48","18","19","88","24","31","20","4","14","1","15","5","16","22","2","11"]
+			["48","18","19","88","24","31","20","4","14","1","15","5","16","22","2","11"],
+			["10","4","19","20","42","24","48","88","11","14","2","18","11","22","16","1"],
+			["41","31","2","5","42","24","22","5","1","78","19","11","14","88","15","48"]
 	       ];
 }
 function getWeek1(){
