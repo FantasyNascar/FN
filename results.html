@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+<head>
+<link rel="stylesheet" type="text/css" href="Format.css">
+<meta charset="utf-8">
+<title> Fantasy Results 2015</title>
+<script src="arr.js" type="text/javascript"></script>
+</head>
+<body>
+   <div class = "header"></div>
+   <a href="home.html"  class="bf_button"><span>Home</span></a>
+   <a href="results.html"  class="bf_button"><span>Results</span></a>
+   <a href="standings.html"  class="bf_button"><span>Standings</span></a>
+   <a href="standingsGraph.html"  class="bf_button"><span>Standings Graph</span></a>
+   <a href="proStandings.html"  class="bf_button"><span>Projected Standings</span></a>
+   <a href="chat.html"  class="bf_button"><span>Chat</span></a>
+   </br>
+   </br>
+   <script>
+
+
+      var numberOfWeeksDone= getWeekNumber();
+      //document.write(numberOfWeeksDone);
+      var weeknumber = numberOfWeeksDone;
+      
+
+      var temp, i;
+      var raceLocation=getRaceLocations();
+      var driverName=getDriverName();
+      var place=getPlaces();
+      var week1=getWeek1();
+      var week2=getWeek2();
+      var week3=getWeek3();
+      var week4=getWeek4();
+      var week5=getWeek5();
+      var week6=getWeek6();
+      var week7=getWeek7();
+      var week8=getWeek8();
+      var week9=getWeek9();
+      var week10=getWeek10();
+      var week11=getWeek11();
+      var week12=getWeek12();
+      var week13=getWeek13();
+      var week14=getWeek14();
+      var week15=getWeek15();
+      var week16=getWeek16();
+      var week17=getWeek17();
+      var week18=getWeek18();
+      var week19=getWeek19();
+      var week20=getWeek20();
+      var week21=getWeek21();
+      var week22=getWeek22();
+      var week23=getWeek23();
+      var week24=getWeek24();
+      var week25=getWeek25();
+      var week26=getWeek26();
+      var week27=getWeek27();
+      var week28=getWeek28();
+      var week29=getWeek29();
+      var week30=getWeek30();
+      var week31=getWeek31();
+      var week32=getWeek32();
+      var week33=getWeek33();
+      var week34=getWeek34();
+      var week35=getWeek35();
+      var week36=getWeek36();
+
+      //row 1
+      document.write('<table border="1">');
+      document.write('<tr>');
+      document.write('<th>' + 'Place' + '</th>');
+
+   weeknumber = weeknumber+1;
+   var arrNumPick =  getNumberOfPicks(weeknumber+1);
+      for (i=13;i<weeknumber+1;i++){
+         document.write('<th>' + raceLocation[i+17] + '</th>');
+      }
+         document.write('</tr>');
+         //rest of the rows
+         for(i=0;i<week1.length;i++){
+            document.write('<tr>');
+            //col 1
+            document.write('<td id="placeCol2">' + place[i] + '</td>');
+            //col 2
+            
+            if(weeknumber > 0){document.write('<td id="row2">' + driverName[driverName.indexOf(week1[i])+1] + '</td>');
+            }
+            //col 3
+            if(weeknumber > 1){document.write('<td id="row2">' + driverName[driverName.indexOf(week2[i])+1] + '</td>');
+            }
+            // //col 4
+            if(weeknumber > 2){document.write('<td id="row2">' + driverName[driverName.indexOf(week3[i])+1] + '</td>');
+            }
+            // //col 5
+            if(weeknumber > 3){document.write('<td id="row2">' + driverName[driverName.indexOf(week4[i])+1] + '</td>');
+            }
+            // //col 6
+            if(weeknumber > 4){document.write('<td id="row2">' + driverName[driverName.indexOf(week5[i])+1] + '</td>');
+            }
+            //col 7
+            
+            if(weeknumber > 5){document.write('<td id="row2">' + driverName[driverName.indexOf(week6[i])+1] + '</td>');
+            }
+
+            // //col 8
+            if(weeknumber > 6){document.write('<td id="row2">' + driverName[driverName.indexOf(week7[i])+1] + '</td>');
+            }
+            
+            // //col 9
+            if(weeknumber > 7){document.write('<td id="row2">' + driverName[driverName.indexOf(week8[i])+1] + '</td>');
+            }
+            // //col 10
+            if(weeknumber > 8){document.write('<td id="row2">' + driverName[driverName.indexOf(week9[i])+1] + '</td>');
+            }
+            // //col 11
+            if(weeknumber > 9){document.write('<td id="row2">' + driverName[driverName.indexOf(week10[i])+1] + '</td>');
+            }
+            
+            // //col 12
+            if(weeknumber > 10){document.write('<td id="row2">' + driverName[driverName.indexOf(week11[i])+1] + '</td>');
+            }
+            // //col 13
+            if(weeknumber > 11){document.write('<td id="row2">' + driverName[driverName.indexOf(week12[i])+1] + '</td>');
+            }
+            
+            // //col 14
+            if(weeknumber > 12){document.write('<td id="row2">' + driverName[driverName.indexOf(week13[i])+1] + '</td>');
+            }
+            
+            // //col 15
+            if(weeknumber > 13){document.write('<td id="row2">' + driverName[driverName.indexOf(week14[i])+1] + '</td>');
+            }
+            // //col 16
+            if(weeknumber > 14){document.write('<td id="row2">' + driverName[driverName.indexOf(week15[i])+1] + '</td>');
+            }
+            // //col 17
+            if(weeknumber > 15){document.write('<td id="row2">' + driverName[driverName.indexOf(week16[i])+1] + '</td>');
+            }
+            
+            // //col 18
+            if(weeknumber > 16){document.write('<td id="row2">' + driverName[driverName.indexOf(week17[i])+1] + '</td>');
+            }
+            // //col 19
+            
+            if(weeknumber > 17){document.write('<td id="row2">' + driverName[driverName.indexOf(week18[i])+1] + '</td>');
+            }
+            // //col 20
+            if(weeknumber > 18){document.write('<td id="row2">' + driverName[driverName.indexOf(week19[i])+1] + '</td>');
+            }
+            // //col 21
+            if(weeknumber > 19){document.write('<td id="row2">' + driverName[driverName.indexOf(week20[i])+1] + '</td>');
+            }
+            // //col 22
+            if(weeknumber > 20){document.write('<td id="row2">' + driverName[driverName.indexOf(week21[i])+1] + '</td>');
+            }
+            // //col 23
+            if(weeknumber > 21){document.write('<td id="row2">' + driverName[driverName.indexOf(week22[i])+1] + '</td>');
+            }
+            // //col 24
+            if(weeknumber > 22){document.write('<td id="row2">' + driverName[driverName.indexOf(week23[i])+1] + '</td>');
+            }
+            // //col 25
+            if(weeknumber > 23){document.write('<td id="row2">' + driverName[driverName.indexOf(week24[i])+1] + '</td>');
+            }
+            // //col 26
+            if(weeknumber > 24){document.write('<td id="row2">' + driverName[driverName.indexOf(week25[i])+1] + '</td>');
+            }
+            // //col 27
+            if(weeknumber > 25){document.write('<td id="row2">' + driverName[driverName.indexOf(week26[i])+1] + '</td>');
+            }
+            // //col 28
+            if(weeknumber > 26){document.write('<td id="row2">' + driverName[driverName.indexOf(week27[i])+1] + '</td>');
+            }
+            // //col 29
+            if(weeknumber > 27){document.write('<td id="row2">' + driverName[driverName.indexOf(week28[i])+1] + '</td>');
+            }
+            // //col 30
+            if(weeknumber > 28){document.write('<td id="row2">' + driverName[driverName.indexOf(week29[i])+1] + '</td>');
+            }
+            // //col 31
+            if(weeknumber > 29){document.write('<td id="row2">' + driverName[driverName.indexOf(week30[i])+1] + '</td>');
+            }
+            // //col 32
+            if(weeknumber > 30){document.write('<td id="row2">' + driverName[driverName.indexOf(week31[i])+1] + '</td>');
+            }
+            // //col 33
+            if(weeknumber > 31){ document.write('<td id="row2">' + driverName[driverName.indexOf(week32[i])+1] + '</td>');
+            }
+            // //col 34
+            if(weeknumber > 32){document.write('<td id="row2">' + driverName[driverName.indexOf(week33[i])+1] + '</td>');
+            }
+            // //col 35
+            if(weeknumber > 33){document.write('<td id="row2">' + driverName[driverName.indexOf(week34[i])+1] + '</td>');
+            }
+            // //col 36
+            if(weeknumber > 34){document.write('<td id="row2">' + driverName[driverName.indexOf(week35[i])+1] + '</td>');
+            }
+            // //col 37
+            if(weeknumber > 35){document.write('<td id="row2">' + driverName[driverName.indexOf(week36[i])+1] + '</td>');
+            }
+            
+            // last col to show who picked who for the next week
+            var temp2 = arrNumPick.indexOf(Math.max.apply(Math,arrNumPick));
+            temp2 = temp2.toString();
+            var slot = driverName.indexOf(temp2);
+            var howManyTimesPicked = arrNumPick[temp2];
+            var driverNameForPicked = driverName[slot+1];
+            if(howManyTimesPicked == 1){
+               document.write('<td id="pic">' + driverNameForPicked+': ' + howManyTimesPicked + ' pick'+ '</td>');
+               arrNumPick[temp2] = 0;
+            }
+            else if(howManyTimesPicked != 0){
+               document.write('<td id="pic">' + driverNameForPicked+': ' + howManyTimesPicked + ' picks'+ '</td>');
+               arrNumPick[temp2] = 0;
+            }
+            else{
+               document.write('<td id="row2">' + " " +'</td>');
+            }
+         }
+         document.write('</table>');
+      
+   </script>
+
+<!-- Start of StatCounter Code for Dreamweaver -->
+<script type="text/javascript">
+var sc_project=9902478; 
+var sc_invisible=1; 
+var sc_security="37c9b104"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="create counter"
+href="http://statcounter.com/free-hit-counter/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/9902478/0/37c9b104/1/"
+alt="create counter"></a></div></noscript>
+<!-- End of StatCounter Code for Dreamweaver -->
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+<head>
+<link rel="stylesheet" type="text/css" href="Format.css">
+<meta charset="utf-8">
+<title> Fantasy Standings 2015</title>
+<script src="arr.js" type="text/javascript"></script>
+<script src="home.html" type="text/javascript"></script>
+
+</head>
+<body>
+	<div class = "header">	</div>
+	<a href="home.html"  class="bf_button"><span>Home</span></a>
+	<a href="results.html"  class="bf_button"><span>Results</span></a>
+	<a href="standings.html"  class="bf_button"><span>Standings</span></a>
+	<a href="standingsGraph.html"  class="bf_button"><span>Standings Graph</span></a>
+	<a href="proStandings.html"  class="bf_button"><span>Projected Standings</span></a>
+	<a href="chat.html"  class="bf_button"><span>Chat</span></a>
+	</br>
+   </br>
+   <!-- 
+   <div id="rightSide">
+  	<p>
+		Commissioner note:
+	</br>
+
+ </br>
+
+ 
+	</p>
+</div> -->
+	<!--<div id="leftSide"> -->
+	<script>
+		//0 -> dont show,      1 -> show
+		var showStandings = 0; 
+
+		//This week point  98,98,67,96,128,70,22,51,137,88,128,0,159,60,129
+
+
+		
+
+		//This week pos   9,9,5,8,11,6,2,3,14,7,11,1,15,4,13
+
+
+		
+		var lastPointStanding=[0,0,0,0,0,0,0,0,0,0,0];
+
+		var lastPosStanding=[1,1,1,1,1,1,1,1,1,1,1,1];
+		
+		var i;
+		var driverName=getDriverName();
+		var scoreArr=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+		var winArr=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+		var placeArr= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+   		var thisPointStanding=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+   		var thisPosStanding=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+		var place=getPlaces();
+		var playersName=getPlayersName();
+		var numberOfWeeks=getWeekNumber();
+		var fullpicks=getPlayersPicks();
+		var driverName=getDriverName();
+		var allStar = allStarRace();
+
+		
+		//find point total
+		for (i=0;i<playersName.length;i++){	
+			scoreArr[i]=getAllPoints(i);
+			winArr[i]=getAllWins(i);
+		}
+		//find last week standing
+		for (i=0;i<playersName.length;i++){	
+			scoreArr[i]=getAllPoints(i);
+			winArr[i]=getAllWins(i);
+		}
+
+			
+		var nameArr =getPlayersName();
+		var slot;
+		
+		document.write('<table border="1">');
+		//header
+		document.write('<tr>');
+  		document.write('<th>' + 'Place' + '</th>');
+  		document.write('<th>' + 'Team' + '</th>');
+  		document.write('<th>' + 'Points' + '</th>');
+  		document.write('<th>' + 'From First'+ '</th>');
+  		document.write('<th>' + 'Wins' + '</th>');
+  		document.write('<th>' + 'Points' + '</th>');
+  		document.write('<th>' + 'Position' + '</th>');
+  		document.write('<th>' + 'Next Weeks Picks' + '</th>');
+   		
+   		document.write('</tr>');
+   		var firstPoint = Math.min.apply(Math,scoreArr);
+   		
+   		for (i=0;i<nameArr.length;i++){
+   			slot = scoreArr.indexOf(Math.min.apply(Math,scoreArr));
+			document.write('<tr>');
+
+			placeArr[i]=scoreArr[slot];
+			var a = scoreArr[slot];
+			thisPointStanding[slot]=a - firstPoint;
+
+			var b = placeArr.indexOf(scoreArr[slot]);
+			thisPosStanding[slot]=b+1;
+
+			var playersPoints =scoreArr[slot];
+			
+			document.write('<td id="placeCol">' + place[b] + '</td>');
+	  		document.write('<td id="row2">' + nameArr[slot] + '</td>');
+	  		document.write('<td id="row2">' + scoreArr[slot] + '</td>');
+	  		var fromFirst = firstPoint-scoreArr[slot];
+	  		document.write('<td id="row2">' + fromFirst + '</td>');
+	  		document.write('<td id="row2">' + winArr[slot] + '</td>');
+	  		//to get the plus or minus for each person of the week with points from first
+	  		var lw = lastPointStanding[slot]-(Math.min.apply(Math,lastPointStanding));
+	  		var tw = thisPointStanding[slot]-(Math.min.apply(Math,thisPointStanding));
+	  		var change = lw-tw;
+	  		if(lw>tw){
+	  			document.write('<td id="improve">' +"+"+change + '</td>');
+	  		}
+	  		else if(lw<tw){
+	  			document.write('<td id="deprove">' + change + '</td>');
+	  		}
+	  		else{
+	  			document.write('<td id="row2">' + change + '</td>');
+	  		}
+
+
+
+	  		//to get the plus or minus for each person of the week with positon from first
+	  		var lw = lastPosStanding[slot];
+	  		var tw = thisPosStanding[slot];
+	  		var change = lw-tw;
+	  		if(lw>tw){
+	  			document.write('<td id="improve">' +"+"+change + '</td>');
+	  		}
+	  		else if(lw<tw){
+	  			document.write('<td id="deprove">' + change + '</td>');
+	  		}
+	  		else{
+	  			document.write('<td id="row2">' + change + '</td>');
+	  		}
+
+
+
+	  		
+	  		document.write('<td id="row3">' + driverName[driverName.indexOf(fullpicks[slot][numberOfWeeks+1])+1]+ '</td>');
+	  		
+
+	  		document.write('</tr>');
+	  		scoreArr[slot] = 1000000;
+
+  		}
+   		document.write('</table>');
+   		if (showStandings==1){
+   			document.write(thisPointStanding);
+   			document.write("</br>"); 
+   			document.write("</br>");
+   			document.write(thisPosStanding);
+   		}
+
+	</script>
+	<h4>
+		1st place : $240
+	</br>
+		2nd place : $30
+	</br>
+		Most Wins : $30
+	</h4>
+	<!--</div> -->
+<!-- Start of StatCounter Code for Dreamweaver -->
+<script type="text/javascript">
+var sc_project=9902480; 
+var sc_invisible=1; 
+var sc_security="a903145b"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9902480/0/a903145b/1/"
+alt="web counter"></a></div></noscript>
+<!-- End of StatCounter Code for Dreamweaver -->
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+<head>
+<link rel="stylesheet" type="text/css" href="Format.css">
+<meta charset="utf-8">
+<title> Standings 2015</title>
+<script src="arr.js" type="text/javascript"></script>
+<script src="home.html" type="text/javascript"></script>
+
+</head>
+<body>
+	<div class = "header"></div>
+	<a href="home.html"  class="bf_button"><span>Home</span></a>
+	<a href="results.html"  class="bf_button"><span>Results</span></a>
+	<a href="standings.html"  class="bf_button"><span>Standings</span></a>
+	<a href="standingsGraph.html"  class="bf_button"><span>Standings Graph</span></a>
+	<a href="proStandings.html"  class="bf_button"><span>Projected Standings</span></a>
+	<a href="chat.html"  class="bf_button"><span>Chat</span></a>
+	</br>
+   </br>
+
+	<div id="leftSide">
+	<script>
+		
+		
+		var i;
+		var driverName=getDriverName();
+		var scoreArr=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+		var winArr=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+		var placeArr= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+   		var thisStanding=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+		var place=getPlaces();
+		var playersName=getPlayersName();
+		var numberOfWeeks=getWeekNumber();
+		var fullpicks=getPlayersPicks();
+		var driverName=getDriverName();
+		var weeksNumber= getWeekNumber();
+
+		//find point total
+		for (i=0;i<playersName.length;i++){	
+			scoreArr[i]=getAllPoints(i);
+			winArr[i]=getAllWins(i);
+		}
+
+
+			
+		var nameArr =getPlayersName();
+		var slot;
+		
+		document.write('<table border="1">');
+		//header
+		document.write('<tr>');
+  		document.write('<th>' + 'Place' + '</th>');
+  		document.write('<th>' + 'Team' + '</th>');
+  		document.write('<th>' + 'Points' + '</th>');
+  		document.write('<th>' + 'From First'+ '</th>');
+  		document.write('<th>' + 'Wins' + '</th>');
+  		document.write('<th>' + 'Next Week Picks' + '</th>');
+   		
+   		document.write('</tr>');
+   		var firstPoint = Math.min.apply(Math,scoreArr);
+   		
+   		for (i=0;i<nameArr.length;i++){
+   			slot = scoreArr.indexOf(Math.min.apply(Math,scoreArr));
+			document.write('<tr>');
+			placeArr[i]=scoreArr[slot];
+			var a = placeArr.indexOf(scoreArr[slot]);
+			var playersPoints =scoreArr[slot];
+			thisStanding[slot]=a+1;
+			document.write('<td id="placeCol">' + place[a] + '</td>');
+	  		document.write('<td id="row2">' + nameArr[slot] + '</td>');
+	  		document.write('<td id="row2">' + scoreArr[slot] + '</td>');
+	  		var fromFirst = firstPoint-scoreArr[slot];
+	  		document.write('<td id="row2">' + fromFirst + '</td>');
+	  		document.write('<td id="row2">' + winArr[slot] + '</td>');
+	  		
+	  		
+	  		document.write('<td id="row3">' + driverName[driverName.indexOf(fullpicks[slot][numberOfWeeks+1])+1]+ '</td>');
+	  		
+
+	  		document.write('</tr>');
+	  		scoreArr[slot] = 1000000;
+
+  		}
+   		document.write('</table>');
+   		if (showStandings==1){
+   			document.write(thisStanding);
+   		}
+
+	</script>
+	</div>
+
+	   <div id="rightSide">
+	   	<form action="notRealStandings.php" method="get">
+   			<script>
+   			var usedPeople=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+   			var varNames=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o"];
+   			var varSecondNames=["aa","bb","cc","dd","ee","ff","gg","hh","ii","jj","kk","ll","mm","nn","oo"];
+   			var arrSlot=0;
+   			var driverNameForAddScore=["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"];
+   			for(var x = 0; x< varNames.length; x++){
+   				var carNumber=fullpicks[x][weeksNumber+1];
+   				if(usedPeople.indexOf(carNumber)==-1){
+   					usedPeople[arrSlot]=carNumber;
+   					driverNameForAddScore[arrSlot]=driverName[driverName.indexOf(fullpicks[x][weeksNumber+1])+1];
+   					arrSlot ++;
+   				}	
+			}
+			for(x= 0; x<arrSlot; x++){
+				var temp = driverNameForAddScore[x];
+				//this is to send the number of the driver to the other page
+				document.write('<input type="hidden" name="'+ varSecondNames[x] +'" value='+usedPeople[x] +'> ');
+				//this is to send the point that the driver had earned 
+				document.write(temp + ' : <input type="text" length="2" name='+ varNames[x] +'> '+ '</br>' );
+			}
+			//to tell the other page how many variables to expect
+				document.write('<input type="hidden" length="2" name="numberOfDrivers" value='+arrSlot +'> ');
+
+			</script>
+			
+			<input type="submit" value="Submit" />
+			<form action="proStandings.html" method="get">
+          		<button id="reset" type="reset"> Reset </button>
+         	</form> 
+		</form>
+	
+		
+		
+	
+  	
+	</div>
+
+
+</body>
+</html>

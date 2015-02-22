@@ -1,0 +1,223 @@
+body{
+	background-color: #e9eaed;
+}
+
+.header {
+    height:75px;
+    background: url(Header.jpg) center 50% no-repeat;
+    background-size:100%;
+    border:1px solid #CCC;
+    height: 120px;
+}
+
+
+.bf_button {  
+  border: 0px solid #000000;
+   background: #b83809;
+   background: -webkit-gradient(linear, left top, left bottom, from(#d97930), to(#b83809));
+   background: -webkit-linear-gradient(top, #d97930, #b83809);
+   background: -moz-linear-gradient(top, #d97930, #b83809);
+   background: -ms-linear-gradient(top, #d97930, #b83809);
+   background: -o-linear-gradient(top, #d97930, #b83809);
+   background-image: -ms-linear-gradient(top, #d97930 0%, #b83809 100%);
+   padding: 5.5px 11px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #000000 0 1px 0;
+   color: #ffffff;
+   font-size: 15px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: left;
+ } 
+
+.bf_button:hover {  
+    border: 0px solid #000000;
+   text-shadow: #000000 0 1px 0;
+   background: #d45b2f;
+   background: -webkit-gradient(linear, left top, left bottom, from(#e67c35), to(#d45b2f));
+   background: -webkit-linear-gradient(top, #e67c35, #d45b2f);
+   background: -moz-linear-gradient(top, #e67c35, #d45b2f);
+   background: -ms-linear-gradient(top, #e67c35, #d45b2f);
+   background: -o-linear-gradient(top, #e67c35, #d45b2f);
+   background-image: -ms-linear-gradient(top, #e67c35 0%, #d45b2f 100%);
+   color: #fff;
+} 
+
+.bf_button span{  
+    text-shadow: #000000 0 1px 0;
+   border: 0px solid #000000;
+   background: #b83709;
+   background: -webkit-gradient(linear, left top, left bottom, from(#d97930), to(#d45b2f));
+   background: -webkit-linear-gradient(top, #d97930, #b83709);
+   background: -moz-linear-gradient(top, #d97930, #b83709);
+   background: -ms-linear-gradient(top, #d97930, #b83709);
+   background: -o-linear-gradient(top, #d97930, #b83709);
+   background-image: -ms-linear-gradient(top, #d97930 0%, #b83709 100%);
+   color: #fff;
+ }
+
+.main{
+ 	 margin: 0;
+ 	 display: inline; 
+}
+#rightSide{
+  text-align: left;
+  display: block;
+  float: right;
+  background-color: darkgray;
+  width: 50%;
+}
+#rightSideNoColor{
+  text-align: left;
+  display: block;
+  float: right;
+  width: 60%;
+}
+#leftSide{
+  float: left;
+  width: 47%;
+}
+
+h2{
+  color: white;
+  font-size: 62px;
+  text-shadow: black 0.1em 0.1em 0.2em
+}
+
+table, td, th{
+text-align: center;
+font-size: 11px;
+font-family: arial;
+box-shadow: 5px 5px 2.5px #E0D8E0;
+ border-radius: 2px
+}
+th{
+background-color:#003366;
+color:white;
+font-family: arial;
+border:1px none;
+
+}
+
+td#row1{
+  text-align: center;
+  background-color: #003366;
+  color:white;
+  font-family: arial;
+  font-style: arial;
+  font-weight: bold;
+}
+td#placeCol{
+  text-align: center;
+  background-color: #003366;
+  color:white;
+  font-family: arial;
+  font-style: arial;
+}
+td#placeCol2{
+  font-size: 14px;
+}
+td#row2{ 
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+ }
+ td#row3{ 
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+ }
+td#improve{ 
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  background-color:darkgreen;
+ }
+ td#deprove{ 
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #BB2121;
+ }
+
+ td#raceCol{ 
+  text-align: center;
+  font-weight: bold;
+  color:white;
+  border: none;
+  font-family: arial;
+  background-color: #003366;
+ }
+
+ td#pushRight{
+  text-align: right;
+ }
+ td#finalRow{
+  text-align: center;
+  background-color: darkgray;
+  font-weight: bold;
+ }
+  td#adriver{
+  text-align: center;
+  background-color: #404040 ;
+  font-style: italic;
+ }
+
+ td#weekCol{
+  text-align: right;
+  font-weight: bold;
+ }
+ td#pic{
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 12px;
+  color: darkred;
+ }
+ td#win{
+ 	background-image: url("winner.jpg");
+    background-size:200%;
+   
+    font-weight: bolder;
+    font:Arial;
+ }
+ td#winc{
+  background-color:darkgreen;
+  color:white;
+  text-align: center;
+ }
+ td#totalPoints{
+  font-size: 14px;
+  font-weight: bold;
+ }
+ td#backup{
+  background-color: #383838 ;
+  color:white;
+  text-align: center;
+ }
+
+
+#triLeft{
+  position: fixed;
+  left: 0%;
+  right:336px;
+}
+#triMiddle{
+  position: fixed;
+  left: 343px;
+  right: 50%;
+  top: 230px;
+  font-size: 15px;
+  line-height: 150%;
+}
+#triRight{
+  position: fixed;
+  left: 470px;
+}
+
+
